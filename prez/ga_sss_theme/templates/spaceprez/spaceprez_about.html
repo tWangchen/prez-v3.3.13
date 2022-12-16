@@ -1,0 +1,26 @@
+{% extends "_page.html" %}
+
+{% set breadcrumbs = [
+    {"label": "About", "url": url_for("about")}
+] %}
+{% set main_active_page = "about" %}
+
+{% block content %}
+<div id="content-col-main">
+    <h1>About this System</h1>
+    <p>This linked data registry is a read only web delivery system for GeoSPARQL spatial data. It complies with Content Negotiation by Profile. This is an
+implementation of SpacePrez.</p>
+    <h2>Documentation</h2>
+    <p>See the documentation at the <a href="https://surroundaustralia.github.io/Prez/">Prez System Documentation</a>.</p>
+    <h2>License</h2>
+    <p>Prez is licensed using the <a href="https://github.com/surroundaustralia/Prez/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">BSD 3-Clause licence</a>.</p>
+    <h2>Contacts</h2>
+    <p>
+        <strong>Commonwealth of Australia (Geoscience Australia)</strong><br />
+        <strong>Post:</strong>GPO Box 378, Canberra ACT 2601 Australia<br />
+        <strong>Address:</strong> Cnr Jerrabomberra Ave and Hindmarsh Drive, Symonston ACT 2609<br/>
+        <strong>Email:</strong> <a href="dataman@ga.gov.au">dataman@ga.gov.au</a><br />
+        <strong>Phone:</strong> General Enquiries: 1800 800 173, Switchboard: +61 2 6249 9111<br />
+    </p>
+</div>
+{% endblock %}

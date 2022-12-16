@@ -1,0 +1,268 @@
+:root {
+    --primary: #006983;
+    --secondary: #006983;
+    --tertiary: #006983;
+    --link: var(--primary);
+    --link-hover: var(--link);
+    --btn: var(--primary);
+    --btn-hover: #A33F1F;
+    --btn-active: #A33F1F;
+    --nav-bg: #ffffff;
+    --nav-hover: #003145;
+    --header-bg: #ffffff;
+    --footer-bg: #2f2f2f;
+    --card-bg: #efefef;
+    --table-row-bg: #efefef;
+
+    --title-color-primary: #2f2f2f;
+    --title-color-secondary: #5e6a71;
+    --border-color: #d8d8d8;
+
+    /* sizing */
+    --page-max-width: 1200px;
+
+    /* fonts */
+    --body-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --heading-font: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#footer-content {
+    gap: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+#footer-content-top {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+a.footer-nav-item {
+    color: white;
+}
+
+ol#breadcrumbs-content {
+    color: black;
+    font-size: 11px;
+    gap: 0px;
+}
+
+#breadcrumbs-content > li > a {
+    color: var(--link);
+}
+
+h1 {
+    color: var(--title-color-primary);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding: 20px 0px;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--title-color-secondary);
+    font-weight: 400;
+}
+
+h3 {
+    color: var(--title-color-primary);
+    font-weight: 400;
+}
+
+h4 {
+    color: var(--title-color-secondary);
+    font-weight: bold;
+    margin: 16px 0px;
+}
+
+h5 {
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+h6 {
+    color: var(--title-color-primary);
+    font-weight: 400;
+}
+
+#content-col-main > h1 {
+    margin-top: -12px;
+}
+
+#alt > h3 {
+    margin-top: 0px;
+}
+
+a:not([class]):hover,
+a[class=""]:hover,
+a.search-result-title:hover,
+a.search-result-vocab:hover {
+    text-decoration: underline;
+}
+
+.alt-quick-link > a:hover,
+a#sidenav-title:hover {
+    text-decoration: none;
+}
+
+#breadcrumbs-content>li.breadcrumb:not(:first-child)::before {
+    content: "|";
+    font-family: unset;
+    font-weight: unset;
+    margin-right: 12px;
+}
+
+#header-content {
+    flex-direction: row;
+    gap: 40px;
+    color: black;
+}
+
+#header-content-left {
+    display: flex;
+}
+
+#header-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#header-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+a.header-nav-link {
+    color: black;
+}
+
+#header-logo-link {
+    margin: auto 0;
+}
+
+#header-logo-link > img {
+    width: 140px;
+}
+
+#slogan {
+    margin: 12px 0px;
+    font-size: 18px;
+}
+
+.main-nav-item {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-bottom: 1px dotted var(--border-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.main-nav-item:not(.active):hover {
+    border-color: transparent;
+    /* background-color: var(--nav-hover-color); */
+    color: white;
+}
+
+nav#sub-nav > a.sub-nav-item {
+    font-weight: normal;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+.prez-item:hover > a,
+.prez-item:hover > button,
+nav#sub-nav > a.sub-nav-item:hover {
+    text-decoration: none;
+    color: white;
+}
+
+nav#main-nav-side {
+    border-right: 1px dotted var(--border-color);
+}
+
+a#sidenav-title {
+    color: black;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding: 16px 6px;
+}
+
+#mobile-header > #mobile-title {
+    color: black;
+}
+
+#breadcrumbs-container {
+    margin-bottom: 12px;
+}
+
+thead > tr {
+    background-color: var(--primary);
+    color: white;
+}
+
+table tr:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+table.alt-table tbody tr:nth-child(2n+1) {
+    background-color: unset;
+}
+
+table.alt-table tbody tr:nth-child(2n) {
+    background-color: var(--table-row-bg);
+}
+
+@media screen and (max-width: 420px) {
+    a#sidenav-title {
+        display: none;
+    }
+
+    #header-logo-link > img {
+        width: 100px;
+    }
+
+    #header-content {
+        gap: 20px;
+    }
+
+    #slogan {
+        font-size: 16px;
+    }
+
+    #header-nav {
+        gap: 16px;
+    }
+
+    a.header-nav-link {
+        font-size: 12px;
+    }
+
+    #content-col-main > h1 {
+        margin-top: 0px;
+    }
+
+    nav#main-nav-side {
+        border-right: none;
+    }
+
+    #footer-content-top {
+        flex-direction: column;
+    }
+
+    #mobile-header {
+        height: 35px;
+    }
+
+    #mobile-header > .nav-toggle,
+    #mobile-header > .alt-toggle {
+        height: 100%;
+    }
+}
